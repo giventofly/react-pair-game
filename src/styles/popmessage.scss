@@ -1,0 +1,30 @@
+@import "globals";
+
+.popmessage {
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $red;
+  z-index: 100;
+  font-weight: 700;
+  font-size: calc(1rem + 8vw);
+  opacity: 0.5;
+  width: 100%;
+  .level {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

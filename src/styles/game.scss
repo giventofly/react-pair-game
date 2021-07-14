@@ -1,0 +1,130 @@
+@import "globals";
+
+.content {
+  height: 100vh;
+  padding: 24px;
+  width: 100%;
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 12px;
+    .scores {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      div {
+        font-weight: 700;
+        min-width: 60px;
+        margin-right: 12px;
+        span {
+          opacity: 0.8;
+          display: inline-block;
+          font-size: 0.7rem;
+          margin-left: 4px;
+          font-weight: 400;
+        }
+      }
+    }
+    .timeleft {
+      margin-left: auto;
+      margin-right: 12px;
+      font-weight: 700;
+      span {
+        opacity: 0.8;
+        display: inline-block;
+        font-size: 0.7rem;
+        margin: 0 6px;
+        font-weight: 400;
+      }
+    }
+    button {
+      padding: 6px;
+      border-radius: 0.3rem;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: calc(100vh - 48px - 55px);
+  margin-left: -16px;
+  margin-right: -16px;
+  .card {
+    width: calc(100% / 4 - 12px);
+    height: calc(100% / 4 - 12px);
+    position: relative;
+    margin: 6px;
+    //border-radius: 14px;
+    .card-content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+      //overflow: hidden;
+      //@include BoxShadow(4);
+      transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+    &.show,
+    &.show-active,
+    &.show-block {
+      .card-content {
+        transform: rotateY(180deg);
+        //transform: rotateY(180deg);
+      }
+      img {
+      }
+    }
+    &.show-active {
+    }
+    &.show-block {
+      opacity: 0.5;
+      filter: grayscale(1);
+    }
+    img,
+    .overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      backface-visibility: hidden;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    img {
+      transform: rotateY(180deg);
+    }
+    .overlay {
+      background: #03446a;
+      //transform: rotateY(180deg);
+    }
+  }
+  &.line-10 {
+    .card {
+      width: calc(100% / 5 - 12px);
+      height: calc(100% / 4 - 12px);
+    }
+  }
+  &.line-12 {
+    .card {
+      width: calc(100% / 4 - 12px);
+      height: calc(100% / 6 - 12px);
+    }
+  }
+  &.line-15 {
+    .card {
+      width: calc(100% / 5 - 12px);
+      height: calc(100% / 6 - 12px);
+    }
+  }
+}

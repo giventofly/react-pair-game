@@ -1,0 +1,37 @@
+@import "globals";
+
+ul.highscores {
+  padding: 23px 0;
+  list-style: none;
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    span {
+      display: inline-block;
+      opacity: 0.6;
+      font-size: 0.7rem;
+      margin-left: 6px;
+    }
+    .name {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .points {
+      margin-left: 32px;
+      min-width: 100px;
+    }
+    .level {
+      margin-left: 32px;
+    }
+  }
+}
+
+.highscore {
+  font-size: 2rem;
+  font-weight: 700;
+}
