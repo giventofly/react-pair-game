@@ -39,15 +39,6 @@
         font-weight: 400;
       }
     }
-    button {
-      padding: 6px;
-      border-radius: 0.3rem;
-      text-transform: uppercase;
-      font-weight: 700;
-
-      font-size: 0.8rem;
-      cursor: pointer;
-    }
   }
 }
 
@@ -105,7 +96,7 @@
       transform: rotateY(180deg);
     }
     .overlay {
-      background: #03446a;
+      background: $blue;
       //transform: rotateY(180deg);
     }
   }

@@ -115,7 +115,7 @@ class GamePage extends React.Component {
   //calculate next level
 
   //insert new score
-  insertHighscore = (score, max = 20) => {
+  insertHighscore = (score, max = 12) => {
     let highscores = JSON.parse(localStorage.getItem("scoresList")) || [];
     let scoresList = [...highscores, score]
       //sort DESC level

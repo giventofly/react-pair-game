@@ -1,0 +1,24 @@
+@import "globals";
+
+.start-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  input {
+    margin: 24px 0;
+    padding: 4px;
+    border: none;
+    border-bottom: solid 1px $black;
+  }
+  button {
+    margin-top: 24px;
+  }
+}
+
+.f-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
